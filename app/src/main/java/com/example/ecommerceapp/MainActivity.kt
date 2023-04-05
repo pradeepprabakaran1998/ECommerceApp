@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                         val product = products[position]
                         itemName.text = product.name
                         itemPrice.text = product.price.toString()
-                        GlideApp.with(applicationContext).load(product.imgPath).override(500, 500).into(imgView)
+                        GlideApp.with(applicationContext).load(product.imgPath).override(500, 500).optionalFitCenter().into(imgView)
                         return view
                     }
                 }
@@ -76,6 +76,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    override fun onBackPressed() {
+        finish()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

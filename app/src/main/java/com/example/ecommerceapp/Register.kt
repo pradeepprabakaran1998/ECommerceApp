@@ -16,7 +16,6 @@ class Register : AppCompatActivity() {
     lateinit var inputPwd:String
     lateinit var inputConfirmPwd:String
     lateinit var regBtn:Button
-
     lateinit var mAuth:FirebaseAuth
     lateinit var mUser:FirebaseUser
 
